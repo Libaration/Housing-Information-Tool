@@ -21,8 +21,8 @@ export const Details = (props) => {
     });
     const request = {
       location: map.getCenter(),
-      radius: '1609',
-      query: 'attractions',
+      rankBy: 'DISTANCE',
+      query: 'parks',
     };
     const service = new props.google.maps.places.PlacesService(map);
     service.textSearch(request, callback);
